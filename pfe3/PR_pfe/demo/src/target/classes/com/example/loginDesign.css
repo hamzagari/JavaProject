@@ -1,0 +1,180 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 03 10, 23, 10:44:33 AM
+    Author     : WINDOWS 10
+*/
+
+.gradient{
+    -fx-background-color: linear-gradient(to bottom right, #a51616, #2f1b72);
+    -fx-background-radius: 5px;
+}
+
+
+.white-form{
+    -fx-background-color: #ffffff;
+}
+
+.head-label{
+    -fx-border-color: #286155;
+    -fx-border-width: 0 0 0 3px;
+    -fx-padding: 0 0 0 5px;
+}
+
+
+.radius{
+-fx-background-radius: 5em;
+}
+
+
+
+.bn{
+    -fx-background-color: #5659ec; /* Button background color */
+    -fx-text-fill: rgb(255, 0, 0); /* Text color */
+    -fx-text-fill: white;
+
+}
+
+/* Animation pour le survol du bouton */
+.bn:hover {
+    -fx-background-color: #839cec; /* Nouvelle couleur de fond au survol */
+    -fx-transition: background-color 0.3s, border-color 0.3s; /* Durée de l'animation */
+}
+
+/* Animation de clic sur le bouton */
+.bn:active{
+    -fx-background-color: #6b87d4; /* Nouvelle couleur de fond pendant le clic */
+}
+
+.textf:focused{
+    -fx-border-width: 0.5px;
+    -fx-font-size:13px;
+    -fx-border-color: rgb(5, 61, 214);
+
+}
+
+.GoToWeb{
+
+-fx-border-color: rgb(129, 129, 160);
+-fx-border-radius:5px;
+-fx-border-width: 0.3px;
+
+
+}
+
+.textf{
+    -fx-border-radius:0.5em;
+    -fx-font-size:12px;
+    -fx-font-family:"Arial", sans-serif;
+    -fx-padding:7px;
+    -fx-text-fill:#201e1e;
+    -fx-background-color: #ffffff;
+    -fx-border-width:0.2px;
+    -fx-border-color:rgb(137, 163, 233);
+    
+}
+
+.btn2{
+    -fx-background-color: #ffffff; /* Button background color */
+    -fx-text-fill:rgb(101, 101, 239); /* Button text color */
+    -fx-font-family: "Arial", sans-serif; /* Button font family */
+    -fx-font-size: 10px; /* Button font size */
+    -fx-background-radius: 2px; /* Button background radius */
+    -fx-border-width: 0px; /* Button border width */
+    -fx-alignment:left;
+    -fx-cursor: hand; /* Cursor style on hover */
+
+}
+.btn2:hover{
+-fx-background-color: #f9f7fa; /* Nouvelle couleur de fond au survol */
+-fx-font-size: 10px; /* Button font size */
+   
+}
+
+/* Styles for when the mouse hovers over the text field */
+/* .textfield:hover {
+    -fx-background-color: #e0e0e0;
+} */
+
+/* Styles for when the text field is focused */
+
+
+
+/* styles.css */
+
+.hyperlink {
+    -fx-font-size: 10px;
+    -fx-text-fill: #0073e6; /* Set the default text color */
+    -fx-text-alignment:center; /* Set the default text color */
+}
+
+.hyperlink:hover {
+    -fx-text-fill: #6b48e8; /* Change text color on hover */
+    -fx-background-color:white; /* Reset background color */
+    /*-fx-border-color: #cfdbe7;  Set border color on hover */
+   /* -fx-border-width: 1px;  Set border width on hover */
+
+
+}
+
+.hyperlink:pressed {
+    -fx-background-color: #a8bcd0; /* Set background color on click */
+    -fx-text-fill: white; /* Set text color on click */
+}
+
+
+.alert-header {
+    -fx-background-color: #ffc7c7; /* Header background color */
+    -fx-text-fill: rgb(255, 0, 0); /* Header text color */
+    -fx-border-radius:5px;
+    -fx-padding: 5px;
+    -fx-background-radius:2px;
+    -fx-padding:5px;
+    -fx-font-size:11px;
+}
+.alert-success {
+    -fx-background-color: #bbefd8; /* Header background color */
+    -fx-text-fill: rgb(1, 2, 2); /* Header text color */
+    -fx-border-radius:4px;
+    -fx-padding:5px;
+}
+.under{
+    -fx-text-fill: rgb(250, 6, 6);
+    -fx-padding:0px 6px;
+    -fx-font-size: 9px;
+}
+.button-styled{
+    -fx-background-color: #509e14; /* Button background color */
+    -fx-text-fill: #ffffff; /* Button text color */
+    -fx-font-family: "Arial", sans-serif; /* Button font family */
+    -fx-font-size: 11px; /* Button font size */
+    -fx-padding: 5px 5px; /* Button padding */
+    -fx-border-radius:4px; /* Button border radius */
+    -fx-background-radius: 4px; /* Button background radius */
+    -fx-border-color: #509e14; /* Button border color */
+    -fx-border-width: 0px; /* Button border width */
+    -fx-cursor: hand; /* Cursor style on hover */
+    -fx-box-shadow: 36px 10px 15px 6px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.button-styled:hover {
+    -fx-background-color: #6fbb2d; /* Button background color on hover */
+}
+.shadow{
+    -fx-effect:dropShadow(three-pass-box,rgba(0, 0, 0, 0.1), 10.0,0.0,0.0,10.0);
+}
+.cadr{
+    -fx-border-width: 0.5px;
+ -fx-border-color: rgb(113, 98, 255);
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.2.final using JasperReports Library version 6.21.2-8434a0bd7c3bbc37cbf916f2968d35e4b165821a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="image" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c4bfe8bf-d048-4a88-b007-48a681326409">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="100" y="24" width="400" height="30" forecolor="#FC201C" uuid="66e961b9-c36f-4145-a4f9-396b0028d5f2">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Britannic Bold" size="22"/>
+					<paragraph lineSpacingSize="4.0"/>
+				</textElement>
+				<text><![CDATA[Mustapha ELAZZozuzi 25412]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="256" splitType="Stretch">
+			<image>
+				<reportElement x="220" y="35" width="170" height="186" uuid="7424c73f-e569-4770-9db4-cd5079b9ee34"/>
+				<imageExpression><![CDATA["C:/Users/hamza/Pictures/IMG_20230422_112309.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+</jasperReport>

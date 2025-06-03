@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mainFormcontroller">
+   <children>
+      <AnchorPane fx:id="main_form" prefHeight="701.0" prefWidth="1373.0">
+         <children>
+            <ImageView fx:id="logo6" fitHeight="703.0" fitWidth="1297.0" layoutX="59.0" layoutY="-42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../java/com/example/image/logo6.gif" />
+               </image>
+            </ImageView>
+            <AnchorPane fx:id="iventory_page" layoutX="225.0" layoutY="34.0" prefHeight="590.0" prefWidth="770.0" visible="false">
+               <children>
+                  <AnchorPane fx:id="inventory_form" layoutX="16.0" layoutY="-4.666666666666667" prefHeight="609.0" prefWidth="955.0" AnchorPane.bottomAnchor="-14.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="-201.0" AnchorPane.topAnchor="-5.0">
+                     <children>
+                        <AnchorPane layoutX="15.0" layoutY="14.0" prefHeight="286.0" prefWidth="849.0" stylesheets="@../../../java/com/example/mainFormDesign.css" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                           <styleClass>
+                              <String fx:value="white-bg" />
+                              <String fx:value="radius" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <children>
+                              <TableView fx:id="inventory_tableView" layoutX="8.0" layoutY="16.0" onMouseClicked="#inventorySelectData" prefHeight="204.0" prefWidth="803.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="16.0">
+                                <columns>
+                                  <TableColumn fx:id="inventory_col_productID" prefWidth="75.0" text="Product ID" />
+                                  <TableColumn fx:id="inventory_col_productName" prefWidth="126.0" text="Product Name" />
+                                    <TableColumn fx:id="inventory_col_type" prefWidth="128.0" text="Type" />
+                                    <TableColumn fx:id="inventory_col_stock" prefWidth="93.0" text="Stock" />
+                                    <TableColumn fx:id="inventory_col_price" prefWidth="100.0" text="Price" />
+                                    <TableColumn fx:id="inventory_col_status" prefWidth="121.0" text="Status" />
+                                    <TableColumn fx:id="inventory_col_date" prefWidth="121.0" text="Date" />
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="-56.666666666666664" layoutY="325.0" prefHeight="267.0" prefWidth="901.0" stylesheets="@../../../java/com/example/mainFormDesign.css" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="14.0">
+                           <styleClass>
+                              <String fx:value="white-bg" />
+                              <String fx:value="radius" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <children>
+                              <Label layoutX="56.0" layoutY="30.0" text="Product ID:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="inventory_productID" layoutX="134.0" layoutY="28.0" prefHeight="25.0" prefWidth="169.0" style="-fx-background-radius: 8;" styleClass="textf" stylesheets="@../../../java/com/example/loginDesign.css" />
+                              <Label layoutX="32.0" layoutY="70.0" text="Product Name:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="inventory_productName" layoutX="134.0" layoutY="67.0" prefHeight="25.0" prefWidth="168.0" style="-fx-background-radius: 8;" styleClass="textf" stylesheets="@../../../java/com/example/loginDesign.css" />
+                              <Label layoutX="91.0" layoutY="110.0" text="Type:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="inventory_type" layoutX="134.0" layoutY="107.0" prefHeight="25.0" prefWidth="168.0" promptText="Choose Type..." style="-fx-background-color: white;" />
+                              <Label layoutX="388.0" layoutY="31.0" text="Stock:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="inventory_stock" layoutX="432.0" layoutY="28.0" prefHeight="25.0" prefWidth="168.0" promptText="0" style="-fx-background-radius: 8;" styleClass="textf" stylesheets="@../../../java/com/example/loginDesign.css" />
+                              <Label layoutX="372.0" layoutY="70.0" text="Price ($):">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="inventory_price" layoutX="432.0" layoutY="68.0" prefHeight="25.0" prefWidth="168.0" promptText="\$0.0" style="-fx-background-radius: 8;" styleClass="textf" stylesheets="@../../../java/com/example/loginDesign.css" />
+                              <AnchorPane layoutX="700.0" layoutY="26.0" prefHeight="117.0" prefWidth="120.0" stylesheets="@../../../java/com/example/mainFormDesign.css" AnchorPane.rightAnchor="29.0">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <ImageView fx:id="inventory_imageView" fitHeight="127.0" fitWidth="120.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-radius: 20;" />
+                                 </children>
+                              </AnchorPane>
+                              <Button fx:id="inventory_importBtn" layoutX="711.0" layoutY="163.0" mnemonicParsing="false" onAction="#inventoryImportBtn" prefHeight="26.0" prefWidth="99.0" style="-fx-background-radius: 20;" styleClass="btnAdminx" stylesheets="@../../../java/com/example/loginDesign.css" text="Import" AnchorPane.rightAnchor="39.0" />
+                              <Button fx:id="inventory_addBtn" layoutX="105.0" layoutY="189.0" mnemonicParsing="false" onAction="#inventoryAddBtn" prefHeight="41.0" prefWidth="112.0" style="-fx-background-radius: 20;" styleClass="btnAdminx" stylesheets="@../../../java/com/example/loginDesign.css" text="Add" AnchorPane.bottomAnchor="31.0" />
+                              <Button fx:id="inventory_updateBtn" layoutX="238.0" layoutY="189.0" mnemonicParsing="false" onAction="#inventoryUpdateBtn" prefHeight="41.0" prefWidth="112.0" style="-fx-background-radius: 20;" styleClass="btnAdminx" stylesheets="@../../../java/com/example/loginDesign.css" text="Update" AnchorPane.bottomAnchor="31.0" />
+                              <Button fx:id="inventory_clearBtn" layoutX="395.0" layoutY="189.0" mnemonicParsing="false" onAction="#inventoryClearBtn" prefHeight="41.0" prefWidth="112.0" style="-fx-background-radius: 20;" styleClass="btnAdminx" stylesheets="@../../../java/com/example/loginDesign.css" text="Clear" AnchorPane.bottomAnchor="31.0" />
+                              <Button fx:id="inventory_deleteBtn" layoutX="528.0" layoutY="189.0" mnemonicParsing="false" onAction="#inventoryDeleteBtn" prefHeight="41.0" prefWidth="112.0" style="-fx-background-radius: 20;" styleClass="btnAdminx" stylesheets="@../../../java/com/example/loginDesign.css" text="Delete" AnchorPane.bottomAnchor="31.0" />
+                              <Label layoutX="386.0" layoutY="112.0" text="Status:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="inventory_status" layoutX="432.0" layoutY="108.0" prefHeight="25.0" prefWidth="168.0" promptText="Choose Status..." style="-fx-background-color: white;" />
+                           </children>
+                        </AnchorPane>
+                        <Separator layoutX="26.0" layoutY="312.0" prefHeight="2.0" prefWidth="899.0" AnchorPane.bottomAnchor="283.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="30.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="579.0" prefWidth="222.0">
+               <children>
+                  <AnchorPane layoutX="13.333333333333334" prefHeight="657.0" prefWidth="217.0" styleClass="gradient2" stylesheets="@../../../java/com/example/loginDesign.css" AnchorPane.bottomAnchor="-78.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane layoutX="11.0" layoutY="37.0" prefHeight="87.0" prefWidth="222.0" stylesheets="@../../../java/com/example/styles.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="5.0" layoutY="33.0" text="Cafe ESTM" textFill="WHITE">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <Label layoutX="14.0" layoutY="103.0" text="Welcome," textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="username" layoutX="84.0" layoutY="100.0" prefHeight="17.0" prefWidth="126.0" text="Hamza" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="inventory_btn" layoutX="6.0" layoutY="248.0" mnemonicParsing="false" onAction="#inventory" prefHeight="31.0" prefWidth="198.0" styleClass="btnAdminx" stylesheets="@../../../java/com/example/loginDesign.css" text="Inventory">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="menu_btn" layoutX="4.0" layoutY="311.0" mnemonicParsing="false" onAction="#menu" prefHeight="33.0" prefWidth="197.0" styleClass="btnAdminx" stylesheets="@../../../java/com/example/loginDesign.css" text="Menu">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="admin_btn" layoutX="3.0" layoutY="380.0" mnemonicParsing="false" onAction="#admin" prefHeight="33.0" prefWidth="201.0" styleClass="btnAdminx" stylesheets="@../../../java/com/example/loginDesign.css" text="Admin">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="logout_btn" layoutX="14.0" layoutY="554.0" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="96.0" stylesheets="@../../../java/com/example/loginDesign.css" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="14.0">
+                           <styleClass>
+                              <String fx:value="button-styled" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                        </Button>
+                        <Label layoutX="38.0" layoutY="563.0" text="Sign Out" AnchorPane.bottomAnchor="15.666666666666629" AnchorPane.leftAnchor="38.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="menu_page" prefHeight="590.0" prefWidth="770.0" visible="false">
+               <children>
+                  <AnchorPane fx:id="menu_form" layoutX="155.0" layoutY="30.0" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutX="164.0" layoutY="15.2" prefHeight="314.0" prefWidth="806.0" stylesheets="@../../../../../../../../pfe/PR_pfe/demo/src/main/java/com/example/mainFormDesign.css" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="164.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="15.0">
+                           <styleClass>
+                              <String fx:value="white-bg" />
+                              <String fx:value="radius" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <children>
+                              <TableView fx:id="cuisine_tableView_2" onMouseClicked="#cuisinSelectData" prefHeight="257.0" prefWidth="806.0" stylesheets="@../../../../../../../../pfe/PR_pfe/demo/src/main/java/com/example/mainFormDesign.css" tableMenuButtonVisible="true">
+                                 <columns>
+                                    <TableColumn fx:id="cuisine_col_comendeID" prefWidth="75.0" text=" ID" />
+                                    <TableColumn fx:id="cuisine_col_productName" prefWidth="126.0" text="Product Name" />
+                                    <TableColumn fx:id="cuisine_col_price" prefWidth="100.0" text="Price" />
+                                    <TableColumn fx:id="cuisine_col_total" prefWidth="121.0" text="Total" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="72.0" layoutY="223.0" prefHeight="356.0" prefWidth="1002.0" AnchorPane.bottomAnchor="-6.0" AnchorPane.leftAnchor="72.0" AnchorPane.rightAnchor="197.0" AnchorPane.topAnchor="223.0">
+                           <children>
+                              <TableView fx:id="cuisine_tableView_3" layoutX="98.0" layoutY="66.0" prefHeight="198.0" prefWidth="805.0" stylesheets="@../../../../../../../../pfe/PR_pfe/demo/src/main/java/com/example/mainFormDesign.css" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="92.0" AnchorPane.leftAnchor="98.0" AnchorPane.rightAnchor="98.0" AnchorPane.topAnchor="66.0">
+                                 <columns>
+                                    <TableColumn fx:id="commande_col_productID" prefWidth="75.0" text=" ID" />
+                                    <TableColumn fx:id="commande_col_N_de_table" prefWidth="126.0" text="N° de table" />
+                                    <TableColumn fx:id="commende_col_N_users" prefWidth="128.0" text="N° usere" />
+                                    <TableColumn fx:id="commende_col_total" prefWidth="93.0" text="Total" />
+                                    <TableColumn fx:id="commende_col_date" prefWidth="121.0" text="Date" />
+                                    <TableColumn fx:id="commende_col_quantiter" prefWidth="79.99993896484386" text="Quantity" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                              <Button fx:id="cuisin_V_commend" layoutX="371.0" layoutY="313.0" mnemonicParsing="false" onAction="#valider_commande" prefHeight="42.0" prefWidth="238.0" style="-fx-background-radius: 20;" styleClass="btnAdminx" stylesheets="@../../../java/com/example/loginDesign.css" text="valider la commande" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
